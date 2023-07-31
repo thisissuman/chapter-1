@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="roota">
+      <h1>Namste JavaScript</h1>
+    </div>
+    <div id="root">
+      <h1>Namste JavaScript</h1>
+    </div>
+
+    <script>
+      const h1 = document.createElement("h1");
+      h1.innerHTML = "Hi suman";
+      const root = document.getElementById("roota").appendChild(h1); // js
+    </script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const heading1 = React.createElement("h1", { key: 1}, "Its form react"); // create Element
+      const heading2 = React.createElement("h2", {key: 2}, "Its form react h2");
+      const container = React.createElement("div", {}, [heading1,heading2]); // passing multile child
+       
+      const rootreact = ReactDOM.createRoot(document.getElementById("root")); // create root
+      rootreact.render(container); // this render method takes an element and injected in root
+    </script>
+  </body>
+</html>
